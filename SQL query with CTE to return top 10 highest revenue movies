@@ -1,0 +1,11 @@
+	# Top 10 highest revenue movies
+  
+  SELECT F.title AS Movie_name,	
+		   SUM (PM.amount) AS Total_Revenue
+	FROM public.film F	
+	INNER JOIN public.inventory INV ON F.film_id = INV.film_id	
+	INNER JOIN public.rental R ON INV.inventory_id = R.inventory_id	
+	INNER JOIN public.payment PM ON R.rental_id = PM.rental_id	
+	GROUP BY title	
+	ORDER BY Total_Revenue DESC	
+	LIMIT 10;	
