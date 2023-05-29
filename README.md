@@ -11,4 +11,4 @@ Data:
 
 A relational database made up of 17 tables contatining data on film rentals, customers, actors, payments and more. Full Data Set
 
-View the project viz's here: Tableau Viz.
+View the project viz's here: [Tableau Viz](https://public.tableau.com/shared/H6DFN4SZF?:display_count=n&:origin=viz_share_link)
