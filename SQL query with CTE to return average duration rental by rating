@@ -1,0 +1,7 @@
+# Average Duration Rental by Rating
+
+	SELECT rating,
+	       AVG (rental_duration) AS average_rental_duration
+	FROM public.film
+	GROUP BY rating
+	
