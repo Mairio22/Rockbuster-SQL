@@ -1,0 +1,12 @@
+# Get customer count and total payment received against each country 
+
+SELECT country,
+       COUNT(DISTINCT CUS.customer_id) AS customer_count,
+       SUM(amount) AS total_payment
+FROM customer CUS
+INNER JOIN address AD ON CUS.address_id = AD.address_id
+INNER JOIN city CT ON AD.city_id = CT.city_id
+INNER JOIN country CTR ON CT.country_ID = CTR.country_ID
+INNER JOIN payment PM ON CUS.customer_id = PM.customer_id
+GROUP BY country
+ORDER BY total_payment DESC
