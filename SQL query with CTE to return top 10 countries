@@ -1,0 +1,13 @@
+# Top 10 countries
+
+SELECT CTR.country AS country_name,	
+	   COUNT(CUS.customer_id) AS number_of_customers
+FROM public.customer CUS	
+INNER JOIN public.address AD ON CUS.address_id = AD.address_id	
+INNER JOIN public.city CT ON AD.city_id = CT.city_id	
+INNER JOIN public.country CTR ON CT.country_id = CTR.country_id	
+GROUP BY country	
+ORDER BY number_of_customers DESC	
+LIMIT 10	
+	
+	
