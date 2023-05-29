@@ -1,0 +1,14 @@
+# Revenue by Genre
+
+SELECT name AS Genre,	
+	   SUM (PM.amount) AS Total_Revenue
+FROM public.category CA	
+INNER JOIN public.film_category FC ON CA.category_id = FC.category_id	
+INNER JOIN public.film F ON FC.film_id = F.film_id	
+INNER JOIN public.inventory INV ON F.film_id = INV.film_id	
+INNER JOIN public.rental R ON INV.inventory_id = R.inventory_id	
+INNER JOIN public.payment PM ON R.rental_id = PM.rental_id	
+GROUP BY name	
+ORDER BY Total_Revenue DESC	
+	
+	
