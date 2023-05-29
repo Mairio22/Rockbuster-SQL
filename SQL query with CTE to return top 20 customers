@@ -1,0 +1,20 @@
+# Top 20 customers
+
+	SELECT CUS.customer_id,		
+		   CUS.first_name,	
+		   CUS.last_name,	
+		   CT.city AS city_name,	
+		   CTR.country AS country_name,	
+		   SUM(amount) AS total_amount_paid	
+	FROM public.customer CUS		
+	INNER JOIN public.payment PM ON CUS.customer_id = PM.customer_id		
+	INNER JOIN public.address AD ON CUS.address_id = AD.address_id		
+	INNER JOIN public.city CT ON AD.city_id = CT.city_id		
+	INNER JOIN public.country CTR ON CT.country_id = CTR.country_id		
+	GROUP BY CTR.country,  		
+	         CT.city,		
+			 CUS.customer_id,
+		     CUS.first_name,	
+		     CUS.last_name	
+	ORDER BY total_amount_paid DESC		
+	LIMIT 20;		
