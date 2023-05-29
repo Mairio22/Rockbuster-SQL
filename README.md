@@ -26,4 +26,4 @@ The dataset comprises a database with the following tables:
 - Country
 For a full breakdown of what these tables contain, please reference the ERD.
 
-View the project viz's here: [Tableau Viz](https://public.tableau.com/shared/H6DFN4SZF?:display_count=n&:origin=viz_share_link)
+View the project viz's here: [Tableau Viz](https://public.tableau.com/app/profile/mai3923))
