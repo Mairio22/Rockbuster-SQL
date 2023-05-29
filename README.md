@@ -7,6 +7,23 @@ Rockbuster Stealth LLC is a movie rental company that used to have stores around
 
 ## Data
 
-A relational database made up of 17 tables contatining data on film rentals, customers, actors, payments and more. 
+The dataset comprises a database with the following tables:
+
+- Payment
+- Rental
+- Store
+- Film_actor
+- Inventory
+- Film_category
+- Customer
+- Staff
+- Actor
+- Film
+- Category
+- Language
+- Address
+- City
+- Country
+For a full breakdown of what these tables contain, please reference the ERD.
 
 View the project viz's here: [Tableau Viz](https://public.tableau.com/shared/H6DFN4SZF?:display_count=n&:origin=viz_share_link)
